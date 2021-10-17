@@ -1,0 +1,32 @@
+.heading {
+  margin: 0 0 54px;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+    line-height: 26px;
+    text-align: left;
+    margin: 0 0 27px;
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+.section:not(:first-child) {
+  margin-top: 71px;
+
+  @media (max-width: 768px) {
+    margin-top: 35px;
+  }
+}
