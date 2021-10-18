@@ -18,9 +18,9 @@ function App() {
     const response = await api.getData();
 
     let data = [];
-    response.data.filter(el => {
-      const i = data.findIndex(x => x.title === el.title);
-      if (i === -1 && el.specializedSubjects?.length === 10) {
+    response.data.forEach(el => {
+      const idx = data.findIndex(x => x.title === el.title);
+      if (idx === -1 && el.specializedSubjects?.length === 10) {
         data.push(el);
       }
       return null;
